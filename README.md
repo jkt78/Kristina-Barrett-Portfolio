@@ -6,7 +6,8 @@ A static, single-page professional portfolio for Kristina Barrett, designed for 
 
 - `index.html` — semantic page content and SEO metadata
 - `css/styles.css` — responsive aviation-dataplate visual system
-- `js/main.js` — accessible navigation, progressive reveal, and mail composer enhancement
+- `js/main.js` — accessible navigation and lightweight conversion events
+- `thanks.html` — same-site confirmation after a successful contact-form submission
 - `CNAME` — GitHub Pages custom domain
 
 There is no build step and no package dependency. Serve the repository root with any static HTTP server to preview it locally.
@@ -17,7 +18,9 @@ The portfolio cards are explicitly labeled placeholders. Replace them only with 
 
 ## Contact
 
-The site intentionally uses `kristinaryanbarrett@gmail.com` until a custom-domain mailbox is independently confirmed to receive mail. The form composes a message in the visitor's email application and does not submit data to a third-party service.
+The confirmed contact address is `kristinabarrett@kristinabarrett.com`. Direct email links use that mailbox, and the contact form posts to [FormSubmit](https://formsubmit.co/) without an account, API key, or site-side credentials. The sender's email field becomes Reply-To, a honeypot helps filter spam, and successful submissions return to `thanks.html` on the same site.
+
+After the first live submission, the mailbox owner must click FormSubmit's activation link once. No dashboard login or registration is required.
 
 ## Conversion and quality checklist
 
@@ -26,7 +29,7 @@ The site intentionally uses `kristinaryanbarrett@gmail.com` until a custom-domai
 - [x] Immediate CTAs for role-fit review, résumé request, and project inquiry
 - [x] Specific, credential-backed hard skills and cautious systems/software wording
 - [x] Case-study placeholders structured for problem, constraints, decisions, artifact, and outcome
-- [x] Direct Gmail contact plus a short, labeled email-composer form
+- [x] Direct custom-domain email plus a short, labeled FormSubmit contact form
 - [x] No unverified testimonials, client logos, employers, metrics, or outcomes
 - [x] Semantic landmarks, heading hierarchy, keyboard navigation, visible focus, reduced-motion support, form labels, and accessible SVG descriptions
 - [x] Responsive layout, minimal deferred JavaScript, no tracking scripts, and no build dependency

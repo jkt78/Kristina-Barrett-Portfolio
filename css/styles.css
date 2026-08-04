@@ -1029,6 +1029,14 @@ a {
   background: var(--gunmetal-2);
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .field-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1090,6 +1098,44 @@ a {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.62rem;
   line-height: 1.45;
+}
+
+.confirmation-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: #101315;
+  color: var(--white);
+}
+
+.confirmation-main {
+  display: grid;
+  place-items: center;
+  padding-block: clamp(5rem, 12vw, 10rem);
+}
+
+.confirmation-panel {
+  width: min(100%, 760px);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  border: 1px solid var(--line-dark);
+  background: var(--gunmetal-2);
+  box-shadow: var(--shadow);
+}
+
+.confirmation-panel h1 {
+  margin-top: 1rem;
+  color: var(--yellow);
+  font-size: clamp(3rem, 9vw, 6rem);
+}
+
+.confirmation-panel > p:not(.section-index) {
+  max-width: 54ch;
+  margin: 1.5rem 0 0;
+  color: #c1c8cb;
+}
+
+.confirmation-panel .button {
+  margin-top: 2rem;
 }
 
 .site-footer {
