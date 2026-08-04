@@ -1,30 +1,42 @@
-# Kristina Barrett — Portfolio
+# Kristina Barrett — Professional Portfolio
 
-A single-page portfolio site. No build step, no dependencies, just `index.html`, `styles.css`, and `script.js`. Open `index.html` directly in a browser to preview, or deploy as-is to any static host.
+A static, single-page professional portfolio for Kristina Barrett, designed for deployment on GitHub Pages at [kristinabarrett.com](https://kristinabarrett.com/).
 
-## Design
+## Structure
 
-Blueprint/drafting-sheet aesthetic: warm paper background with a faint grid, cyanotype blue (`#1560BD`) as the signature accent, IBM Plex Mono for headers/labels and IBM Plex Sans for body text. The project cards use hand-built SVG technical drawings that "draw themselves" on scroll (a stroke animation), echoing how a CAD line drawing gets built up stroke by stroke.
+- `index.html` — semantic page content and SEO metadata
+- `css/styles.css` — responsive aviation-dataplate visual system
+- `js/main.js` — accessible navigation, progressive reveal, and mail composer enhancement
+- `CNAME` — GitHub Pages custom domain
 
-## What needs to be replaced before this goes live
+There is no build step and no package dependency. Serve the repository root with any static HTTP server to preview it locally.
 
-1. **Project images** (`index.html`, inside each `.plate` div) — currently placeholder SVG technical drawings. Swap in real project photos, renders, or scanned drawings. Each is clearly marked in a comment.
-2. **Resume link** — the "Download resume" button in the hero points to `/resume.pdf`, which doesn't exist yet. Add the actual resume file to this folder (or wherever it's hosted) and update the `href`.
-3. **Contact form endpoint** — the form action points to a placeholder Formspree URL (`YOUR_FORM_ID`). Sign up at [formspree.io](https://formspree.io) (free tier is enough for a low-volume portfolio contact form) and swap in the real endpoint, or replace the form with a simple `mailto:` link if that's preferred.
-4. **LinkedIn / Upwork links** — currently `#` placeholders in the Contact section, marked TODO. Add once those profiles are live.
+## Portfolio placeholders
 
-## Deploying
+The portfolio cards are explicitly labeled placeholders. Replace them only with verified project photography, CAD views, technical drawings, process documentation, or other non-confidential artifacts. Update each accessible SVG title/description, figure caption, project summary, and tags at the same time.
 
-Any static host works since there's no server/build step:
+## Contact
 
-- **GitHub Pages**: push this repo to GitHub, then enable Pages in the repo settings (Settings → Pages → Deploy from branch → main).
-- **Vercel / Netlify**: connect the repo, no build command needed, output directory is the repo root.
+The site intentionally uses `kristinaryanbarrett@gmail.com` until a custom-domain mailbox is independently confirmed to receive mail. The form composes a message in the visitor's email application and does not submit data to a third-party service.
 
-## Local preview
+## Conversion and quality checklist
 
-Just open `index.html` in a browser. For a local server instead (some browsers restrict certain features under `file://`):
+- [x] Clear mechanical design / aviation positioning above the fold
+- [x] Separate paths for recruiters and technical clients
+- [x] Immediate CTAs for role-fit review, résumé request, and project inquiry
+- [x] Specific, credential-backed hard skills and cautious systems/software wording
+- [x] Case-study placeholders structured for problem, constraints, decisions, artifact, and outcome
+- [x] Direct Gmail contact plus a short, labeled email-composer form
+- [x] No unverified testimonials, client logos, employers, metrics, or outcomes
+- [x] Semantic landmarks, heading hierarchy, keyboard navigation, visible focus, reduced-motion support, form labels, and accessible SVG descriptions
+- [x] Responsive layout, minimal deferred JavaScript, no tracking scripts, and no build dependency
+- [x] Descriptive metadata, canonical URL, Open Graph, robots directive, and accurate Person JSON-LD
+- [x] Privacy-respecting `portfolio:conversion` browser events that a future analytics tool can subscribe to without changing the UI
+- [ ] Add a current downloadable résumé when Kristina supplies and approves the file
+- [ ] Add verified case studies, project media, role details, dates, and outcomes
+- [ ] Add factual professional profile links, testimonials, or client references only when approved
+- [ ] Add privacy-respecting analytics only after the owner chooses a provider and disclosure approach
 
-```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
+## GitHub Pages deployment
+
+In the GitHub repository, open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then save. Confirm the custom domain is `kristinabarrett.com` and enable **Enforce HTTPS** after GitHub reports the certificate is ready. DNS changes are managed separately at the domain registrar.
