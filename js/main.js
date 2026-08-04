@@ -53,6 +53,14 @@
 
   document.querySelectorAll("[data-conversion]").forEach((link) => {
     link.addEventListener("click", () => {
+      if (link.dataset.inquiryType && contactForm) {
+        const inquiryType = contactForm.querySelector("#inquiry-type");
+        const subject = contactForm.querySelector("#subject");
+        if (inquiryType) inquiryType.value = link.dataset.inquiryType;
+        if (subject && !subject.value) subject.value = link.dataset.inquirySubject || "Portfolio inquiry";
+        window.setTimeout(() => inquiryType?.focus(), 0);
+      }
+
       window.dispatchEvent(new CustomEvent("portfolio:conversion", {
         detail: {
           action: link.dataset.conversion,

@@ -7,6 +7,7 @@ A static, single-page professional portfolio for Kristina Barrett, designed for 
 - `index.html` — semantic page content and SEO metadata
 - `css/styles.css` — responsive aviation-dataplate visual system
 - `js/main.js` — accessible navigation and lightweight conversion events
+- `assets/Kristina-Barrett-Resume.pdf` — downloadable current résumé
 - `thanks.html` — same-site confirmation after a successful contact-form submission
 - `CNAME` — GitHub Pages custom domain
 
@@ -35,7 +36,7 @@ After the first live submission, the mailbox owner must click FormSubmit's activ
 - [x] Responsive layout, minimal deferred JavaScript, no tracking scripts, and no build dependency
 - [x] Descriptive metadata, canonical URL, Open Graph, robots directive, and accurate Person JSON-LD
 - [x] Privacy-respecting `portfolio:conversion` browser events that a future analytics tool can subscribe to without changing the UI
-- [ ] Add a current downloadable résumé when Kristina supplies and approves the file
+- [x] Publish the current downloadable résumé with the confirmed custom email
 - [ ] Add verified case studies, project media, role details, dates, and outcomes
 - [ ] Add factual professional profile links, testimonials, or client references only when approved
 - [ ] Add privacy-respecting analytics only after the owner chooses a provider and disclosure approach
