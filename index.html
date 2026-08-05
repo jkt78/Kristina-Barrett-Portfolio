@@ -426,15 +426,15 @@
           <a class="email-link" href="mailto:kristinabarrett@kristinabarrett.com" data-conversion="email_direct" data-conversion-source="contact">kristinabarrett@kristinabarrett.com</a>
         </div>
 
-        <form class="contact-form" action="https://formsubmit.co/kristinabarrett@kristinabarrett.com" method="post" data-contact-form data-reveal>
-          <input type="hidden" name="_subject" value="New portfolio inquiry for Kristina Barrett">
-          <input type="hidden" name="_next" value="https://kristinabarrett.com/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <div class="form-honeypot" aria-hidden="true">
-            <label for="website">Leave this field empty</label>
-            <input id="website" name="_honey" type="text" tabindex="-1" autocomplete="off">
-          </div>
+        <div class="contact-form contact-form-external" data-google-form-panel hidden>
+          <p class="contact-method">Google-owned contact form</p>
+          <h3>Send an inquiry</h3>
+          <p>Use the Google contact form to share your contact details and project or role information.</p>
+          <a class="button button-primary" target="_blank" rel="noopener noreferrer" data-google-form-link data-conversion="open_google_contact_form" data-conversion-source="contact">Open contact form <span aria-hidden="true">↗</span></a>
+          <p class="form-note">Prefer email? Write directly to <a href="mailto:kristinabarrett@kristinabarrett.com">kristinabarrett@kristinabarrett.com</a>.</p>
+        </div>
+
+        <form class="contact-form" action="mailto:kristinabarrett@kristinabarrett.com" method="post" enctype="text/plain" data-contact-form data-reveal>
           <div class="field">
             <label for="inquiry-type">I’m reaching out about</label>
             <select id="inquiry-type" name="Inquiry type" required>
@@ -462,8 +462,8 @@
             <label for="message">What are you working on?</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button class="button button-primary" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
-          <p class="form-note" id="email-note" data-form-status aria-live="polite">Your email address is used as Reply-To. Form details are sent securely through FormSubmit; no account is required.</p>
+          <button class="button button-primary" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
+          <p class="form-note" id="email-note" data-form-status aria-live="polite">Direct email: this button opens your email app with the details above. Nothing is submitted or stored by this website.</p>
         </form>
       </div>
     </section>
@@ -477,6 +477,7 @@
     </div>
   </footer>
 
+  <script src="js/contact-config.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

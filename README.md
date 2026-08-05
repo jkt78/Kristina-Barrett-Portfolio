@@ -7,8 +7,8 @@ A static, single-page professional portfolio for Kristina Barrett, designed for 
 - `index.html` — semantic page content and SEO metadata
 - `css/styles.css` — responsive aviation-dataplate visual system
 - `js/main.js` — accessible navigation and lightweight conversion events
+- `js/contact-config.js` — one-line future Google Form URL configuration
 - `assets/Kristina-Barrett-Resume.pdf` — downloadable current résumé
-- `thanks.html` — same-site confirmation after a successful contact-form submission
 - `CNAME` — GitHub Pages custom domain
 
 There is no build step and no package dependency. Serve the repository root with any static HTTP server to preview it locally.
@@ -19,9 +19,11 @@ The portfolio cards are explicitly labeled placeholders. Replace them only with 
 
 ## Contact
 
-The confirmed contact address is `kristinabarrett@kristinabarrett.com`. Direct email links use that mailbox, and the contact form posts to [FormSubmit](https://formsubmit.co/) without an account, API key, or site-side credentials. The sender's email field becomes Reply-To, a honeypot helps filter spam, and successful submissions return to `thanks.html` on the same site.
+The confirmed contact address is `kristinabarrett@kristinabarrett.com`. Until the Google-owned contact form is ready, the labeled contact workflow validates the fields and opens a prefilled draft in the visitor's email app. The website does not submit or store form data, and the visible email link remains available as a fallback.
 
-After the first live submission, the mailbox owner must click FormSubmit's activation link once. No dashboard login or registration is required.
+### Future Google Form handoff
+
+After the Easy-Mode Job Desk creates the public Google Form responder URL, open `js/contact-config.js` and paste that URL into `googleFormUrl`. Acceptable URLs use `https://docs.google.com/forms/...` or `https://forms.gle/...`. Once configured, the site automatically hides the email-draft fields and displays an **Open contact form** button. No other file needs to change.
 
 ## Conversion and quality checklist
 
@@ -30,7 +32,7 @@ After the first live submission, the mailbox owner must click FormSubmit's activ
 - [x] Immediate CTAs for role-fit review, résumé request, and project inquiry
 - [x] Specific, credential-backed hard skills and cautious systems/software wording
 - [x] Case-study placeholders structured for problem, constraints, decisions, artifact, and outcome
-- [x] Direct custom-domain email plus a short, labeled FormSubmit contact form
+- [x] Direct custom-domain email plus a clearly labeled email-draft workflow
 - [x] No unverified testimonials, client logos, employers, metrics, or outcomes
 - [x] Semantic landmarks, heading hierarchy, keyboard navigation, visible focus, reduced-motion support, form labels, and accessible SVG descriptions
 - [x] Responsive layout, minimal deferred JavaScript, no tracking scripts, and no build dependency

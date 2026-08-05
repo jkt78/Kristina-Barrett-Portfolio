@@ -1029,14 +1029,6 @@ a {
   background: var(--gunmetal-2);
 }
 
-.form-honeypot {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 .field-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1092,50 +1084,43 @@ a {
   width: 100%;
 }
 
+.contact-form-external h3 {
+  margin: 0.75rem 0 0;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contact-form-external > p:not(.contact-method, .form-note) {
+  margin: 1rem 0 0;
+  color: #c1c8cb;
+}
+
+.contact-form-external .button {
+  margin-top: 1.5rem;
+}
+
+.contact-method {
+  margin: 0;
+  color: var(--yellow);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.contact-form-external .form-note a {
+  color: var(--white);
+}
+
 .form-note {
   margin: 0.85rem 0 0;
   color: #9da6aa;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.62rem;
   line-height: 1.45;
-}
-
-.confirmation-page {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  background: #101315;
-  color: var(--white);
-}
-
-.confirmation-main {
-  display: grid;
-  place-items: center;
-  padding-block: clamp(5rem, 12vw, 10rem);
-}
-
-.confirmation-panel {
-  width: min(100%, 760px);
-  padding: clamp(2rem, 6vw, 4.5rem);
-  border: 1px solid var(--line-dark);
-  background: var(--gunmetal-2);
-  box-shadow: var(--shadow);
-}
-
-.confirmation-panel h1 {
-  margin-top: 1rem;
-  color: var(--yellow);
-  font-size: clamp(3rem, 9vw, 6rem);
-}
-
-.confirmation-panel > p:not(.section-index) {
-  max-width: 54ch;
-  margin: 1.5rem 0 0;
-  color: #c1c8cb;
-}
-
-.confirmation-panel .button {
-  margin-top: 2rem;
 }
 
 .site-footer {
